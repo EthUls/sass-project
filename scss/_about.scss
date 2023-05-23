@@ -1,0 +1,52 @@
+
+.about {
+    margin: 50px 0;
+
+    &-items {
+        text-align: center;
+
+        .about-item {
+            margin-bottom: 20px;
+
+            @include sm {
+                @include grid(2, 20px);
+
+                &:nth-child(even) {
+                    .about-item-image {
+                        order: -1;
+                    }
+                }
+            }
+
+            &-content {
+                h1 {
+                    margin: 10px 0 20px;
+                    font-size: 35px;
+                    background: linear-gradient(to right, $primary-color 0%, $secondary-color 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    @include sm {
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    margin: 10px 0;
+                }
+
+                @include sm {
+                    @include flex(center, flex-start, column);
+                }
+            }
+
+            &-image {
+                padding: 30px 0;
+                img {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+
+.features {
+    margin: 50px 0;
+
+
+    &-grid {
+
+        @include md {
+            @include grid(3, 50px);
+        }
+
+        .feature-item {
+            @include flex(flex-start, center, row, nowrap);
+
+            margin-bottom: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+
+            &-icon {
+                padding: 20px;
+                margin-right: 20px;
+                border: 2px solid $secondary-color;
+                border-radius: 50%;
+                text-align: center;
+                color: $secondary-color;
+
+                i {
+                    width: 45px;
+                    font-size: 40px;
+                }
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: white;
+                    border-color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .features-image {
+            max-width: 200px;
+            margin: auto;
+
+            @include md {
+                max-width: 350px;
+            }
+        }
+    }
+}
